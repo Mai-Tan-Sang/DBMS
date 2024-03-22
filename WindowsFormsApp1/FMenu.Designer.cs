@@ -33,7 +33,6 @@
             this.txtNameMenu = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSearchMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,13 +59,15 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(546, 349);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // txtSearchMenu
             // 
-            this.txtSearchMenu.Location = new System.Drawing.Point(3, 19);
+            this.txtSearchMenu.Location = new System.Drawing.Point(122, 19);
             this.txtSearchMenu.Name = "txtSearchMenu";
             this.txtSearchMenu.Size = new System.Drawing.Size(225, 22);
             this.txtSearchMenu.TabIndex = 1;
+            this.txtSearchMenu.TextChanged += new System.EventHandler(this.txtSearchMenu_TextChanged);
             // 
             // txtNameMenu
             // 
@@ -83,22 +85,13 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnSearchMenu);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSearchMenu);
             this.panel1.Location = new System.Drawing.Point(602, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 62);
             this.panel1.TabIndex = 4;
-            // 
-            // btnSearchMenu
-            // 
-            this.btnSearchMenu.Location = new System.Drawing.Point(242, 19);
-            this.btnSearchMenu.Name = "btnSearchMenu";
-            this.btnSearchMenu.Size = new System.Drawing.Size(86, 25);
-            this.btnSearchMenu.TabIndex = 3;
-            this.btnSearchMenu.Text = "Tìm Món";
-            this.btnSearchMenu.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -195,6 +188,16 @@
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 20);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Tìm Món:";
+            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -224,7 +227,6 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSearchMenu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -234,5 +236,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label5;
     }
 }

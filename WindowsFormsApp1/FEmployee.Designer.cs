@@ -30,7 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchEmployee = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,6 +49,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,25 +65,17 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(537, 418);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnSearchEmployee);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSearchEmployee);
             this.panel1.Location = new System.Drawing.Point(590, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 62);
             this.panel1.TabIndex = 5;
-            // 
-            // btnSearchEmployee
-            // 
-            this.btnSearchEmployee.Location = new System.Drawing.Point(234, 18);
-            this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(112, 25);
-            this.btnSearchEmployee.TabIndex = 3;
-            this.btnSearchEmployee.Text = "Tìm Nhân Viên";
-            this.btnSearchEmployee.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -95,10 +87,11 @@
             // 
             // txtSearchEmployee
             // 
-            this.txtSearchEmployee.Location = new System.Drawing.Point(3, 19);
+            this.txtSearchEmployee.Location = new System.Drawing.Point(139, 19);
             this.txtSearchEmployee.Name = "txtSearchEmployee";
-            this.txtSearchEmployee.Size = new System.Drawing.Size(225, 22);
+            this.txtSearchEmployee.Size = new System.Drawing.Size(208, 22);
             this.txtSearchEmployee.TabIndex = 1;
+            this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
             // 
             // panel2
             // 
@@ -123,7 +116,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 222);
+            this.label6.Location = new System.Drawing.Point(3, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 20);
             this.label6.TabIndex = 13;
@@ -133,7 +126,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 143);
+            this.label5.Location = new System.Drawing.Point(3, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 9;
@@ -157,7 +150,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 103);
+            this.label4.Location = new System.Drawing.Point(3, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 7;
@@ -174,7 +167,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 182);
+            this.label7.Location = new System.Drawing.Point(3, 182);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 20);
             this.label7.TabIndex = 11;
@@ -184,7 +177,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 62);
+            this.label3.Location = new System.Drawing.Point(3, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 20);
             this.label3.TabIndex = 5;
@@ -194,7 +187,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 18);
+            this.label2.Location = new System.Drawing.Point(3, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.TabIndex = 4;
@@ -258,6 +251,16 @@
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 20);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Tìm Nhân Viên:";
+            // 
             // FEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,7 +286,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSearchEmployee;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearchEmployee;
         private System.Windows.Forms.Panel panel2;
@@ -303,5 +305,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label8;
     }
 }

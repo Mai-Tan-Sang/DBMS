@@ -47,11 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
+    <Compile Include="FDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDashBoard.Designer.cs">
+      <DependentUpon>FDashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FEmployee.Designer.cs">
       <DependentUpon>FEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOder.Designer.cs">
+      <DependentUpon>FOder.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -65,16 +77,28 @@
     <Compile Include="FMenu.Designer.cs">
       <DependentUpon>FMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FEmployee.resx">
       <DependentUpon>FEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOder.resx">
+      <DependentUpon>FOder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMenu.resx">
       <DependentUpon>FMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -11,3 +11,5 @@ F:\DBMS\QLCF\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 F:\DBMS\QLCF\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 F:\DBMS\QLCF\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FMenu.resources
 F:\DBMS\QLCF\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FEmployee.resources
+F:\DBMS\QLCF\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FOder.resources
+F:\DBMS\QLCF\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
