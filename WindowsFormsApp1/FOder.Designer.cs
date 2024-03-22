@@ -33,10 +33,11 @@
             this.txtNameMenu = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -66,70 +67,86 @@
             // 
             this.txtNameMenu.Location = new System.Drawing.Point(584, 97);
             this.txtNameMenu.Name = "txtNameMenu";
-            this.txtNameMenu.Size = new System.Drawing.Size(182, 22);
+            this.txtNameMenu.Size = new System.Drawing.Size(204, 22);
             this.txtNameMenu.TabIndex = 4;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(851, 87);
+            this.btnAdd.Location = new System.Drawing.Point(952, 147);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(82, 32);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(584, 156);
+            this.dataGridView2.Location = new System.Drawing.Point(594, 259);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(349, 242);
+            this.dataGridView2.Size = new System.Drawing.Size(440, 242);
             this.dataGridView2.TabIndex = 6;
             // 
-            // textBox2
+            // txtNumber
             // 
-            this.textBox2.Location = new System.Drawing.Point(785, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(48, 22);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(731, 433);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(48, 22);
-            this.textBox3.TabIndex = 8;
+            this.txtNumber.Location = new System.Drawing.Point(723, 152);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(65, 22);
+            this.txtNumber.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(811, 428);
+            this.button1.Location = new System.Drawing.Point(912, 524);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 33);
             this.button1.TabIndex = 9;
             this.button1.Text = "Thanh Toán";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(591, 429);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(590, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 32);
+            this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Số bàn:";
+            this.label2.Text = "Số Lượng:";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(935, 13);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(44, 16);
+            this.lblPrice.TabIndex = 11;
+            this.lblPrice.Text = "label3";
+            this.lblPrice.Visible = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(594, 524);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(122, 33);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FOder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 601);
+            this.ClientSize = new System.Drawing.Size(1110, 601);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNameMenu);
@@ -151,9 +168,10 @@
         private System.Windows.Forms.TextBox txtNameMenu;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Button btnExit;
     }
 }

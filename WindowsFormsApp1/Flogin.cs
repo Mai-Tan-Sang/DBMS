@@ -41,6 +41,16 @@ namespace WindowsFormsApp1
             }
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát hay không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 
 }
